@@ -12,7 +12,7 @@ static int arr[ARR_SIZE];
 void init_dataset() {
     srand(time(NULL));
 
-#pragma omp parallel
+#pragma omp parallel for
     for (int i = 0; i < ARR_SIZE; ++i)
         arr[i] = rand() % 100;
 }

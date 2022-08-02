@@ -7,7 +7,7 @@
 static int arr[ARR_SIZE];
 
 void init_dataset() {
-#pragma omp parallel
+#pragma omp parallel for
     for (int i = 0; i < ARR_SIZE; ++i)
         arr[i] = 1;
 }
